@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="AutoMapper" Version="11.0.1" />
+      <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+      <PackageReference Include="Keycloak.Net" Version="1.0.18" />
+      <PackageReference Include="KeycloakAdapter" Version="2.5.0" />
+      <PackageReference Include="KeyWin" Version="2.8.0" />
+      <PackageReference Include="MediatR" Version="10.0.1" />
+      <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1" />
+      <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="7.0.0-preview.5.22301.12" />
+      <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="7.0.0-preview.5.22301.12" />
+      <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="7.0.0-preview.5.22301.12" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\UMS.Persistence\UMS.Persistence.csproj" />
+    </ItemGroup>
+
+</Project>
