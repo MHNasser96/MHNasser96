@@ -1,11 +1,23 @@
+using System.Configuration;
 using System.Reflection;
 using MediatR;
+using Microsoft.AspNetCore.OData;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.OData.Edm;
+using Microsoft.OData.ModelBuilder;
 using UMS.Application.Entities.Roles.Commands.AddRole;
 using UMS.Application.Entities.Roles.Queries.GetRoles;
 using UMS.Application.Mappers;
 using UMS.Domain.Models;
 using UniversitySystem.Pipelines;
+
+
+static IEdmModel GetEdmModel()
+{
+    ODataConventionModelBuilder builder = new();
+    builder.EntitySet<SessionTime>("SessionTimes");
+    return builder.GetEdmModel();
+}
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,7 +32,7 @@ builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(AppLoggingBeh
 builder.Services.AddMediatR(Assembly.GetExecutingAssembly());
 builder.Services.AddMediatR(typeof(GetRolesQuery).GetTypeInfo().Assembly);
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
-
+builder.Services.AddControllers().AddOData(opt => opt.AddRouteComponents("v1", GetEdmModel()).Filter().Select().Expand().Count().OrderBy());
 
 
 var app = builder.Build();

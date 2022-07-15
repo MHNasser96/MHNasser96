@@ -15,7 +15,6 @@ public class AddCourseHandler:IRequestHandler<AddCourseCommand,Course>
 
     public async Task<Course> Handle(AddCourseCommand request, CancellationToken cancellationToken)
     {
-
         Course course = new Course()
         {
             Name = request.Name,

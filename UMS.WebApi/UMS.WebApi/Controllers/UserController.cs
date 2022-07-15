@@ -2,6 +2,7 @@
 using AutoMapper;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.OData.Query;
 using UMS.Application.DTOs;
 using UMS.Application.Entities.Roles.Queries.GetRoleById;
 using UMS.Application.Entities.Users.Commands.AddUser;
