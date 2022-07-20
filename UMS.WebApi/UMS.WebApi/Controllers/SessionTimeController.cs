@@ -1,8 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using MediatR;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.OData.Formatter;
 using Microsoft.AspNetCore.OData.Query;
 using Microsoft.AspNetCore.OData.Results;
 using Microsoft.AspNetCore.OData.Routing.Controllers;
+using UMS.Application.DTOs;
+using UMS.Application.Entities.SessionTime.Commands.AddSessionTime;
 using UMS.Domain.Models;
 
 namespace UMS.WebApi.Controllers;
@@ -12,11 +16,13 @@ public class SessionTimeController : ODataController
 {
     private readonly UmsContext _context;
     private readonly ILogger<SessionTimeController> _logger;
+    private readonly IMediator _mediator;
     
-    public SessionTimeController(UmsContext context, ILogger<SessionTimeController> logger)
+    public SessionTimeController(UmsContext context, ILogger<SessionTimeController> logger, IMediator mediator)
     {
         _context = context;
         _logger = logger;
+        _mediator = mediator;
     }
     
     [EnableQuery(PageSize = 15)]
@@ -35,31 +41,30 @@ public class SessionTimeController : ODataController
     }
     
     
-    /*[EnableQuery]
-    public async Task<IActionResult> Post([FromBody] SessionTime sessionTime)
+    [HttpPost("Add")]
+    public async Task<IActionResult> AddSessionTime([FromBody] AddSessionTimeCommand addSessionTimeCommand)
     {
-        _context.SessionTimes.Add(sessionTime);
-        await _context.SaveChangesAsync();
-        return Created(sessionTime);
+        var result =  await _mediator.Send(addSessionTimeCommand);
+        return Ok(result);
     }
     
     
-    [EnableQuery]
-    public async Task<IActionResult> Delete([FromODataUri] long key)
-    {
-        SessionTime existingSessionTime = await _context.SessionTimes.FindAsync(key);
-        if (existingSessionTime == null)
-        {
-            return NotFound();
-        }
-    
-        _context.SessionTimes.Remove(existingSessionTime);
-        await _context.SaveChangesAsync();
-        return StatusCode(StatusCodes.Status204NoContent);
-    }
-    
-    private bool SessionTimeExisting(long key)
-    {
-        return _context.SessionTimes.Any(p => p.Id == key);
-    }*/
+    // [EnableQuery]
+    // public async Task<IActionResult> Delete([FromODataUri] long key)
+    // {
+    //     SessionTime existingSessionTime = await _context.SessionTimes.FindAsync(key);
+    //     if (existingSessionTime == null)
+    //     {
+    //         return NotFound();
+    //     }
+    //
+    //     _context.SessionTimes.Remove(existingSessionTime);
+    //     await _context.SaveChangesAsync();
+    //     return StatusCode(StatusCodes.Status204NoContent);
+    // }
+    //
+    // private bool SessionTimeExisting(long key)
+    // {
+    //     return _context.SessionTimes.Any(p => p.Id == key);
+    // }
 }

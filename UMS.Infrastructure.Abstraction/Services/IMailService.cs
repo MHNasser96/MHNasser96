@@ -1,9 +1,8 @@
 ﻿using _101SendEmailNotificationDoNetCoreWebAPI.Model;
 
-namespace UMS.Domain;
+namespace UMS.Infrastructure.Abstraction.Services;
 
 public interface IMailService
 {
     Task SendEmailAsync(MailRequest mailRequest);
-
 }

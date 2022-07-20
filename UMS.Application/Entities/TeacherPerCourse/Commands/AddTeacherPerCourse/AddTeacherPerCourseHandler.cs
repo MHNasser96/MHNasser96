@@ -16,15 +16,12 @@ public class AddTeacherPerCourseHandler : IRequestHandler<AddTeacherPerCourseCom
     public async Task<Domain.Models.TeacherPerCourse> Handle(AddTeacherPerCourseCommand request,
         CancellationToken cancellationToken)
     {
-        Role role = await _context.Roles.FirstOrDefaultAsync(obj => obj.Name == "Teacher", cancellationToken);
-        User user = await _context.Users.FirstOrDefaultAsync(obj => obj.Id == request.TeacherId, cancellationToken);
 
         Domain.Models.TeacherPerCourse teacherPerCourse = new Domain.Models.TeacherPerCourse()
         {
             TeacherId = request.TeacherId,
             CourseId = request.CourseId
         };
-        if (role.Id == user.RoleId)
 
         {
             _context.TeacherPerCourses.Add(teacherPerCourse);
