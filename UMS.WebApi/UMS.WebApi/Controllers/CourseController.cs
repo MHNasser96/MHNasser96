@@ -43,9 +43,9 @@ public class CourseController:Controller
     }
     
     [HttpPost("Create")]
-    public async Task<IActionResult> AddRole(long userID, AddCourseCommand addCourseCommand)
+    public async Task<IActionResult> AddRole(long userRole, AddCourseCommand addCourseCommand)
     {
-        if (userID == 1)
+        if (userRole == 1)
         {
             var result = await _mediator.Send(addCourseCommand);
             return Ok(result);

@@ -1,16 +1,21 @@
-﻿using MediatR;
+﻿using _101SendEmailNotificationDoNetCoreWebAPI.Model;
+using MediatR;
 using NpgsqlTypes;
+using UMS.Application.Services;
 using UMS.Domain.Models;
+using UMS.Infrastructure.Abstraction.Services;
 
 namespace UMS.Application.Entities.Courses.Commands.AddCourse;
 
 public class AddCourseHandler:IRequestHandler<AddCourseCommand,Course>
 {
     private readonly UmsContext _context;
+    private readonly IMailService _mailService;
 
-    public AddCourseHandler(UmsContext context)
+    public AddCourseHandler(UmsContext context, IMailService mailService)
     {
         _context = context;
+        _mailService = mailService;
     }
 
     public async Task<Course> Handle(AddCourseCommand request, CancellationToken cancellationToken)
@@ -27,6 +32,25 @@ public class AddCourseHandler:IRequestHandler<AddCourseCommand,Course>
         { 
             _context.Courses.Add(course);
             _context.SaveChanges();
+            
+            //sending notification to students
+
+            var subscribers =  _context.Users.Where(obj => obj.Subscriber == true).ToList();
+            foreach (var VARIABLE in subscribers)
+            {
+                Console.WriteLine("sending email to "+VARIABLE.Email);
+                _mailService.SendEmailAsync(new MailRequest()
+                {
+                    ToEmail = VARIABLE.Email,
+                    Subject = "New Course Available",
+                    Body = "Hello Student," +
+                           "\n" +
+                           "Kindly note that a new course has been added."
+                });
+                Console.WriteLine("email sent to "+VARIABLE.Email);
+
+
+            }
         }
         catch (Exception e)
         {

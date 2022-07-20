@@ -23,7 +23,8 @@ public class AddUserHandler:IRequestHandler<AddUserCommand,UserDTO>
             Name = request.Name,
             Email = request.Email,
             RoleId = request.RoleId,
-            KeycloakId = request.KeycloakId
+            KeycloakId = request.KeycloakId,
+            Subscriber = request.Subscriber
         };
         try
         {
