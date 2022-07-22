@@ -40,7 +40,7 @@ public class RoleController : Controller
     {
         var result = await _mediator.Send(new GetRoleByIdQuery()
         {
-            Id = id
+            Id = id 
         });
         return (result);
     }
