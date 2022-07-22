@@ -1,0 +1,19 @@
+{
+  "Version": 1,
+  "Hash": "kNaqvKTax68RqjdbH/ac660rKaS1tE8g12ssB2tUzqA=",
+  "Source": "UMS.WebApi",
+  "BasePath": "_content/UMS.WebApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "UMS.WebApi\\wwwroot",
+      "Source": "UMS.WebApi",
+      "ContentRoot": "C:\\Users\\zaina\\Desktop\\Ums\\Ums\\UMS.WebApi\\UMS.WebApi\\wwwroot\\",
+      "BasePath": "_content/UMS.WebApi",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": []
+}

@@ -20,7 +20,7 @@ public class MailService : IMailService
     public async Task SendEmailAsync(MailRequest mailRequest)
     {
         var email = new MimeMessage();
-        email.Sender = MailboxAddress.Parse("lilian18monacos@outlook.com");
+        email.Sender = MailboxAddress.Parse("hussein_nasser.81@hotmail.com");
         email.To.Add(MailboxAddress.Parse(mailRequest.ToEmail));
         email.Subject = mailRequest.Subject;
         var builder = new BodyBuilder();
@@ -28,7 +28,7 @@ public class MailService : IMailService
         email.Body = builder.ToMessageBody();
         using var smtp = new SmtpClient();
         smtp.Connect("smtp.office365.com", 587, SecureSocketOptions.StartTls);
-        smtp.Authenticate("lilian18monacos@outlook.com", "Lilian@18");
+        smtp.Authenticate("hussein_nasser.81@hotmail.com", "Nasser123!!");
         await smtp.SendAsync(email);
         smtp.Disconnect(true);
     }

@@ -1,0 +1,7 @@
+C:\Users\User\Desktop\RiderProjects\Ums\obj\Debug\net6.0\Ums.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\RiderProjects\Ums\obj\Debug\net6.0\Ums.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\RiderProjects\Ums\obj\Debug\net6.0\Ums.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\RiderProjects\Ums\obj\Debug\net6.0\Ums.AssemblyInfo.cs
+C:\Users\User\Desktop\RiderProjects\Ums\obj\Debug\net6.0\Ums.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\RiderProjects\Ums\obj\Debug\net6.0\Ums.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\User\Desktop\RiderProjects\Ums\obj\Debug\net6.0\Ums.MvcApplicationPartsAssemblyInfo.cache

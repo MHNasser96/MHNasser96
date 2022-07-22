@@ -19,15 +19,18 @@ namespace UMS.WebApi.Controllers;
 public class RoleController : Controller
 {
     private readonly IMediator _mediator;
+    private readonly ILogger<RoleController> _logger;
 
-    public RoleController(IMediator mediator)
+    public RoleController(IMediator mediator,ILogger<RoleController> logger)
     {
         _mediator = mediator;
+        _logger = logger;
     }
 
     [HttpGet()]
     public async Task<List<Role>> GetRoles()
     {
+        _logger.LogInformation("Role Get", DateTime.UtcNow);
         var result = await _mediator.Send(new GetRolesQuery());
         return  result;
     }
