@@ -10,7 +10,7 @@ public class RoleAutoMapperProfile : Profile
     {
         CreateMap<RoleDTO, Role>()
             .ForMember(dest => dest.Name,
-                opt => opt.MapFrom(src => src.Name));
+                opt => opt.MapFrom(src => src.Name)).ReverseMap();
 
         CreateMap<Role, RoleDTO>()
             .ForMember(dest => dest.Name, 

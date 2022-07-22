@@ -7,6 +7,8 @@
   <component name="ChangeListManager">
     <list default="true" id="28142182-2158-490b-b82a-1c0380cab5f6" name="Changes" comment="AllProject">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Ums/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Ums/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UMS.Application/Entities/Courses/Commands/AddCourse/AddCourseCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UMS.Application/Entities/Courses/Commands/AddCourse/AddCourseCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UMS.Application/Mappers/RoleAutoMapperProfile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UMS.Application/Mappers/RoleAutoMapperProfile.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +83,7 @@
       <workItem from="1658310163391" duration="1200000" />
       <workItem from="1658404150909" duration="3142000" />
       <workItem from="1658438158054" duration="5935000" />
-      <workItem from="1658475784250" duration="1763000" />
+      <workItem from="1658475784250" duration="4491000" />
     </task>
     <task id="LOCAL-00001" summary="AllProject">
       <created>1658476289708</created>
