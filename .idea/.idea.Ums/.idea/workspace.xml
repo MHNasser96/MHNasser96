@@ -5,31 +5,16 @@
     <projectFile profileName="IIS Express">UMS.WebApi/UMS.WebApi/UMS.WebApi.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="28142182-2158-490b-b82a-1c0380cab5f6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/UMS.Application/Entities/Auth/Queries/Login/LoginHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UMS.Application/Entities/Auth/Queries/Login/LoginQuery.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UMS.WebApi/UMS.WebApi/Controllers/SignInController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UMS.WebApi/UMS.WebApi/DockerFile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UMS.Application/Entities/Users/Commands/AddUser/AddUserHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UMS.Application/Entities/Users/Commands/AddUser/AddUserHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UMS.Application/UMS.Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/UMS.Application/UMS.Application.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UMS.Configuration/UMS.Configuration.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/UMS.Configuration/UMS.Configuration.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UMS.Domain/UMS.Domain.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/UMS.Domain/UMS.Domain.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UMS.Infrastructure.Abstraction/UMS.Infrastructure.Abstraction.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/UMS.Infrastructure.Abstraction/UMS.Infrastructure.Abstraction.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UMS.Infrastructure/Services/MailService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UMS.Infrastructure/Services/MailService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UMS.Infrastructure/UMS.Infrastructure.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/UMS.Infrastructure/UMS.Infrastructure.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UMS.Persistence/UMS.Persistence.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/UMS.Persistence/UMS.Persistence.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UMS.WebApi/UMS.WebApi/Controllers/RoleController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UMS.WebApi/UMS.WebApi/Controllers/RoleController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UMS.WebApi/UMS.WebApi/Controllers/UserController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UMS.WebApi/UMS.WebApi/Controllers/UserController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UMS.WebApi/UMS.WebApi/Docker/docker-compose.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UMS.WebApi/UMS.WebApi/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/UMS.WebApi/UMS.WebApi/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UMS.WebApi/UMS.WebApi/UMS.WebApi.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/UMS.WebApi/UMS.WebApi/UMS.WebApi.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UMS.WebApi/UMS.WebApi/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/UMS.WebApi/UMS.WebApi/appsettings.json" afterDir="false" />
+    <list default="true" id="28142182-2158-490b-b82a-1c0380cab5f6" name="Changes" comment="AllProject">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Ums/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Ums/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="77f312b2-6057-47ce-9d95-1fa58fd6bf59" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -48,7 +33,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
+    "settings.editor.selected.configurable": "vcs.Git",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -96,8 +81,16 @@
       <workItem from="1658310163391" duration="1200000" />
       <workItem from="1658404150909" duration="3142000" />
       <workItem from="1658438158054" duration="5935000" />
-      <workItem from="1658475784250" duration="378000" />
+      <workItem from="1658475784250" duration="1763000" />
     </task>
+    <task id="LOCAL-00001" summary="AllProject">
+      <created>1658476289708</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1658476289709</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -118,5 +111,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="AllProject" />
+    <option name="LAST_COMMIT_MESSAGE" value="AllProject" />
   </component>
 </project>
